@@ -196,6 +196,34 @@ bool MDSwitch::tick() {
 }
 
 /**
+ * @brief programmatically invoke a specific attached callback
+ * 
+ * @param key 
+ * @return true - when a callback was invoked
+ * @return false - no callback was invoked
+ */
+bool MDSwitch::invoke(const MDS_KEYS key) {
+    return this->invoke(this->using_mode, key);
+}
+
+/**
+ * @brief programmatically invoke a specific attached callback
+ * 
+ * @param mode 
+ * @param key 
+ * @return true - when a callback was invoked
+ * @return false - no callback was invoked
+ */
+bool MDSwitch::invoke(const int mode, const MDS_KEYS key) {
+    if (this->eventCallbacks[mode][key] != nullptr) {
+        (this->eventCallbacks[mode][key])(mode, key);
+        return true;
+    }
+    return false;
+}
+
+
+/**
  * @brief reading all pins to determine which key of the switch was used
  * 
  * @return MDS_KEYS - the key/button

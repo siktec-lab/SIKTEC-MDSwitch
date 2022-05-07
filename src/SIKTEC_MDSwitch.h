@@ -145,6 +145,10 @@ public:
     /** @brief when called check wether an event was captured and executes relevent callbacks */
     bool tick();
 
+    /** @brief programmatically invoke a specific attached callback */
+    bool invoke(const MDS_KEYS key);
+    bool invoke(const int mode, const MDS_KEYS key);
+
     /** @brief reading all pins to determine which key of the switch was used */
     static MDS_KEYS PUT_IN_RAM read();
 
