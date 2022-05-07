@@ -6,17 +6,12 @@
 // 
 /******************************************************************************/
 /*****************************      NOTES       *******************************
-    -> UC8276 -> IL0398 SIKTEC_EPD_G4
-    -> UC8276 -> SIKTEC_EPD_3CU
-    -> SSD1619 -> SIKTEC_EPD_3CS
+    -> See readme at: 
+        https://github.com/siktec-lab/SIKTEC-MDSwitch/blob/master/README.md
 *******************************************************************************/
 /*****************************      Changelog       ****************************
 1.0.1:
     -> initial release.
-    -> adafruit gfx compatible.
-    -> 3 drivers allready implemented.
-    -> SRAM support - 23K256-I/SN implements SIKTEC_SRAM Library.
-    -> MONO, TRICOLOR, 4GRAY Modes support.
 *******************************************************************************/
 
 #pragma once
