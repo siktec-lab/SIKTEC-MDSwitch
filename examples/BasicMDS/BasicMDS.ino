@@ -96,14 +96,7 @@ void setup() {
 
     //Initiate serial port:
     Serial.begin(CONT_SERAIL_BAUD);
-    while (!Serial) { ; }
-    
-    //TODO: remove this later its just for debugging
-    #ifdef ESP32 
-        Serial.println("ESP32 is the micro");
-    #else
-        Serial.println("ARDUINO is the micro");
-    #endif
+    while (!Serial) { ; }  
 
     //Initialize and set the switch object:
     mdswitch.init(3 /* how many modes */); ///< each mode can take a set of callbacks.
